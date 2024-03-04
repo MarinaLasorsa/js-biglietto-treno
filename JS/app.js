@@ -39,7 +39,6 @@ else if (parseFloat(age) > 65) {
 }
 
 //ALTRIMENTI 
-//sottrarre zero a prezzo biglietto
 //stampare risultato finale come prezzo finale del biglietto
 
 else {
