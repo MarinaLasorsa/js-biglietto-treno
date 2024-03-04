@@ -32,6 +32,12 @@ if (parseFloat(age) < 18) {
 //sottrarre risultato a prezzo biglietto
 //stampare risultato finale come prezzo finale del biglietto
 
+else if (parseFloat(age) > 65) {
+    var ticketPrice = (ticketPrice - (ticketPrice * 0.4))
+
+    console.log("il prezzo del tuo biglietto è " + ticketPrice.toPrecision(3) + " euro");
+}
+
 //ALTRIMENTI 
 //sottrarre zero a prezzo biglietto
 //stampare risultato finale come prezzo finale del biglietto
