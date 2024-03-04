@@ -7,12 +7,12 @@ oppure applicato uno sconto del 40% per gli over 65.*/
 
 //1. determinare costanti numero di chilometri e età del passeggero tramite prompt
 
-const kilometers = prompt("Inserisci il numero di chilometri che vuoi percorrere"); //string
-const age = prompt("Inserisci la tua età"); //string
+const kilometers = parseInt (prompt("Inserisci il numero di chilometri che vuoi percorrere")); //number
+const age = parseInt (prompt("Inserisci la tua età")); //number
 
 //2. definire prezzo biglietto iniziale moltiplicando 0.21 per la costante chilometri dichiarata
 
-var ticketPrice = (parseFloat(kilometers) * 0.21); //number 
+var ticketPrice = (kilometers * 0.21); //number 
 
 //console.log("il prezzo del tuo biglietto è " + ticketPrice)
 
@@ -21,10 +21,10 @@ var ticketPrice = (parseFloat(kilometers) * 0.21); //number
 //sottrarre risultato a prezzo biglietto
 //stampare risultato finale come prezzo finale del biglietto
 
-if (parseFloat(age) < 18) {
-    var ticketPrice = (ticketPrice - (ticketPrice * 0.2))
+if (age < 18) {
+    var ticketPrice = (ticketPrice - (ticketPrice * 0.2)); //number
     
-    console.log("il prezzo del tuo biglietto è " + ticketPrice.toPrecision(3) + " euro");
+    console.log("il prezzo del tuo biglietto è " + ticketPrice.toFixed(2) + " euro"); //string
 }
 
 //ALTRIMENTI SE costante età è maggiore di 65:
@@ -32,15 +32,15 @@ if (parseFloat(age) < 18) {
 //sottrarre risultato a prezzo biglietto
 //stampare risultato finale come prezzo finale del biglietto
 
-else if (parseFloat(age) > 65) {
-    var ticketPrice = (ticketPrice - (ticketPrice * 0.4))
+else if (age > 65) {
+    var ticketPrice = (ticketPrice - (ticketPrice * 0.4)); //number
 
-    console.log("il prezzo del tuo biglietto è " + ticketPrice.toPrecision(3) + " euro");
+    console.log("il prezzo del tuo biglietto è " + ticketPrice.toFixed(2) + " euro"); //string
 }
 
 //ALTRIMENTI 
 //stampare risultato finale come prezzo finale del biglietto
 
 else {
-    console.log("il prezzo del tuo biglietto è " + ticketPrice.toPrecision(3) + " euro")
+    console.log("il prezzo del tuo biglietto è " + ticketPrice.toFixed(2) + " euro"); //string
 }
