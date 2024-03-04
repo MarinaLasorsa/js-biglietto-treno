@@ -7,7 +7,14 @@ oppure applicato uno sconto del 40% per gli over 65.*/
 
 //1. determinare costanti numero di chilometri e età del passeggero tramite prompt
 
+const kilometers = prompt("Inserisci il numero di chilometri che vuoi percorrere") //string
+const age = prompt("Inserisci la tua età") //string
+
 //2. definire prezzo biglietto iniziale moltiplicando 0.21 per la costante chilometri dichiarata
+
+var ticketPrice = (parseInt(kilometers) * 0.21) //number
+
+console.log("il prezzo del tuo biglietto è " + ticketPrice) 
 
 //3. SE costante età è minore di 18:
 //moltiplicare prezzo biglietto per 0.2
